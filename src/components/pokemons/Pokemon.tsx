@@ -1,4 +1,13 @@
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { getPokemons } from "../../features/pokemons/thunks";
+
 const Pokemon = () => {
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    dispatch(getPokemons())
+  }, []);
   return (
     <div>
       <h1>Pokemon app</h1>
