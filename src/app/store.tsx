@@ -1,9 +1,9 @@
 import { ThunkDispatch, configureStore } from "@reduxjs/toolkit";
 import counterReducer, { CounterState } from '../features/counter/counterSlice'
-import pokemonReducer from '../features/pokemons/pokemonsSlice'
+import pokemonReducer, { pokemonState } from '../features/pokemons/pokemonsSlice'
 export interface RootState {
   counter: CounterState,
-  pokemons: any
+  pokemons: pokemonState
 }
 export type AppDispatch = ThunkDispatch<RootState, unknown, { type: 'INCREMENT', payload: 1 }>;
 

@@ -1,8 +1,14 @@
 import { createSlice } from '@reduxjs/toolkit'
 
+export interface pokemonProps {
+  name: string
+  url: string
+}
+
+
 export interface pokemonState {
   page: number
-  pokemons: Array<any>
+  pokemons: Array<pokemonProps>
   isLoading: boolean
 }
 
